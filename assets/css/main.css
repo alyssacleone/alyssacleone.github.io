@@ -29,6 +29,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+img{
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+	display: block;
+}
+
 body {
 	line-height: 1;
 }
@@ -2173,7 +2180,7 @@ input, select, textarea {
 		position: relative;
 	}
 
-		.image:after {
+		.image:hover:before {
 			-moz-transition: opacity 0.25s ease-in-out;
 			-webkit-transition: opacity 0.25s ease-in-out;
 			-ms-transition: opacity 0.25s ease-in-out;
@@ -2188,6 +2195,20 @@ input, select, textarea {
 			top: 0;
 			width: 100%;
 		}
+
+		.image:hover:after {
+			-moz-transition: opacity 0.25s ease-in-out;
+			-webkit-transition: opacity 0.25s ease-in-out;
+			-ms-transition: opacity 0.25s ease-in-out;
+			transition: opacity 0.25s ease-in-out;
+			background-image: url("images/overlay.png");
+			content: '';
+			display: block;
+			height: 100%;
+			left: 0;
+			opacity: 1;
+		}
+
 
 		.image img {
 			display: block;
@@ -2212,7 +2233,7 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		.image.icon {
+		/*.image.icon {
 			-moz-perspective: 500px;
 			-webkit-perspective: 500px;
 			-ms-perspective: 500px;
@@ -2235,7 +2256,7 @@ input, select, textarea {
 				top: 50%;
 				width: 1em;
 				z-index: 1;
-			}
+			} */
 
 			.image.icon:hover:before {
 				-moz-transform: translateZ(1em);
@@ -2245,7 +2266,7 @@ input, select, textarea {
 			}
 
 			.image.icon:hover:after {
-				opacity: 1;
+				opacity: 0.2;
 			}
 
 	span.image.icon {
@@ -2706,7 +2727,7 @@ input, select, textarea {
 
 	#header {
 		background-attachment: scroll,							scroll,					fixed;
-		background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("../../images/header.jpg");
+		background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("../../images/nasa.png");
 		background-position: bottom center,					top left,				center center;
 		background-repeat: repeat-x,						repeat,					no-repeat;
 		background-size: 3200px 460px,					auto,					cover;
